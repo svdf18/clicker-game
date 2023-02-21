@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+#screen {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+#game {
+    grid-area: 1 / 1;
+    background-color: blue;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 10% / 10%;
+    grid-template-rows: 100%;
+}
+
+/* #game_elements {
+    grid-area: 1 / 1;
+    position: relative;
+    overflow: hidden;
+} */
+
+#game_bg {
+    grid-area: 1 / 1;
+    background-image: url(../clicker-html-test/svg/Clicker_bg.png);
+    background-size: cover;
+}
+
+/* forsøg på at få grainy animation til full overlay */
+/* #game_bg:after {
+    animation: grain 8s steps(10) infinite;
+    background-image: url("svg/paper_1");
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.3;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    z-index: -1;
+  }
+  
+  @keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+  } */
+

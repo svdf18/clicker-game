@@ -1,0 +1,121 @@
+#bad1 {
+    width: 11%;
+    position: absolute;
+    top: 2%;
+    left: 83%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    animation: pulse_glow 2s linear infinite, move_across1 7s ease-in-out infinite;
+}
+
+@keyframes pulse_glow {
+    0% {
+        scale: 100%;
+    }
+
+    50% {
+        scale: 103%
+    }
+
+    100% {
+        scale: 100%;
+    }
+}
+
+@keyframes move_across1 {
+    0% {
+        transform: translate(-200%, -750%);
+        scale: 10%;
+    }
+
+    50% {
+        transform: translate(-400%, 125%);
+
+    }
+  
+    100% {
+      transform: translate(-950%, 150%);
+      scale: 100%;
+      opacity: 0,5;
+    }
+  }
+
+#bad2 {
+    width: 11%;
+    position: absolute;
+    top: 2%;
+    left: 83%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    animation: pulse_glow 2s linear infinite, move_across2 7s ease-in-out infinite;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+@keyframes move_across2 {
+    0% {
+        transform: translate(400%, 750%);
+        scale: 0%;
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-400%, 425%);
+
+    }
+  
+    100% {
+      transform: translate(-950%, 250%);
+      scale: 100%;
+      opacity: 1;
+    }
+  }
+
+#bad3 {
+    width: 11%;
+    position: absolute;
+    top: 2%;
+    left: 8%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    animation: pulse_glow 2s linear infinite, move_across3 8s ease-in-out infinite;
+    }
+
+@keyframes move_across3 {
+    0% {
+        transform: translate(-100%, -650%);
+        scale: 10%;
+    }
+
+    50% {
+        transform: translate(-200%, 125%);
+
+    }
+    
+    100% {
+        transform: translate(950%, 150%);
+        scale: 100%;
+        opacity: 0,5;
+    }
+    }
+
+#bad4 {
+    width: 11%;
+    position: absolute;
+    top: 62%;
+    left: 8%;
+    transform: rotate(30deg);
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    animation: pulse_glow 2s linear infinite, move_across4 7s ease-in-out infinite;
+    }
+
+@keyframes move_across4 {
+    0% {
+        transform: translate(-200%, 500%);
+        scale: 0%;
+    }
+
+    
+    100% {
+        transform: translate(900%, -350%);
+        scale: 100%;
+        opacity: 0,5;
+    }
+    }

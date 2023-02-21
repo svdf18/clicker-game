@@ -1,0 +1,159 @@
+#me1 {
+    width: 11%;
+    position: absolute;
+    top: -24%;
+    left: 83%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(184, 34, 167));
+    animation: pulse_glow 2s linear infinite, move_center1 4s ease-in-out infinite;
+    animation-delay: 200ms;
+}
+
+@keyframes pulse_glow {
+    0% {
+        scale: 100%;
+    }
+
+    50% {
+        scale: 103%
+    }
+
+    100% {
+        scale: 100%;
+    }
+}
+
+@keyframes move_center1 {
+    0% {
+        transform: translate(-100%, -650%);
+        scale: 10%;
+    }
+
+    50% {
+        transform: translate(-200%, 125%);
+
+    }
+  
+    100% {
+      transform: translate(-250%, 150%);
+      scale: 100%;
+      opacity: 0,5;
+    }
+  }
+
+
+
+#me2 {
+    width: 11%;
+    position: absolute;
+    top: 62%;
+    left: 82%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(124, 98, 227));
+    animation: pulse_glow 2s linear infinite, move_center2 4s ease-in-out infinite;
+}
+    @keyframes move_center2 {
+        0% {
+            transform: translate(0%, 0%);
+            scale: 0%;
+        }
+
+        50% {
+            transform: translate(-200%, 125%);
+    
+        }
+    
+        100% {
+            transform: translate(-200%, -100%);
+    
+        }
+      }
+
+
+#me3 {
+    width: 11%;
+    position: absolute;
+    top: 62%;
+    left: 8%;
+    transform: rotate(30deg);
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(24, 137, 129));
+    animation: pulse_glow 2s linear infinite, move_center3 4s ease-in-out infinite;
+}
+    @keyframes move_center3 {
+        0% {
+            transform: translate(-500%, 250%);
+            scale: 0%;
+        }
+    
+      
+        100% {
+          transform: translate(300%, -50%);
+          scale: 100%;
+          opacity: 0,5;
+        }
+      }
+
+#me4 {
+    width: 11%;
+    position: absolute;
+    top: 2%;
+    left: 8%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(197, 174, 111));
+    animation: pulse_glow 2s linear infinite, move_center4 4s ease-in-out infinite;
+    animation-delay: 300ms;
+    opacity: 0;
+}
+
+    @keyframes move_center4 {
+        0% {
+            transform: translate(-100%, -650%);
+            scale: 10%;
+            opacity: 1;
+        }
+    
+        50% {
+            transform: translate(-200%, 125%);
+    
+        }
+      
+        100% {
+          transform: translate(250%, 150%);
+          scale: 100%;
+          opacity: 0,5;
+        }
+      }
+
+
+#impact1 {
+    width: 250%;
+    position: absolute;
+    top: -28%;
+    left: -75%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(184, 34, 167));
+    animation-name: pulse_glow;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#impact2 {
+    width: 250%;
+    position: absolute;
+    top: -28%;
+    left: -75%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(124, 98, 227));
+    animation-name: pulse_glow;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#impact3 {
+    width: 250%;
+    position: absolute;
+    top: -28%;
+    left: -75%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(24, 137, 129));
+    animation-name: pulse_glow;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}

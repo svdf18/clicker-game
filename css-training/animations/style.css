@@ -1,0 +1,115 @@
+/* lidt justering af "baner" og billeder */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+ul li {
+    background-color: #eee;
+    margin-block-end: 1em;
+    height: 5.5em;
+}
+
+ul li img {
+    max-height: 5em;
+    max-width: 10em;
+}
+
+/* animationer */
+
+#robot {
+    animation-name: robot-move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes robot-move {
+    0% {
+        transform: translate(0,0);
+    }
+    100% {
+        transform: translate(100vw,0);
+    }
+}
+
+#bunny {
+    animation-name: bunny-move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out ;
+}
+
+@keyframes bunny-move {
+    0% {
+        transform: translate(0,0);
+    }
+    100% {
+        transform: translate(100vw,0);
+    }
+}
+
+#turtle {
+    animation-name: turtle-move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes turtle-move {
+    0% {
+        transform: translate(0,0);
+    }
+    100% {
+        transform: translate(100vw,0);
+    }
+}
+
+#car {
+    animation-name: car-move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes car-move {
+    0% {
+        transform: translate(0,0);
+    }
+    100% {
+        transform: translate(100vw,0);
+    }
+}
+
+#ball {
+    animation-name: ball-move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.58,.13,.64,.87);
+}
+
+@keyframes ball-move {
+    0% {
+        transform: translate(0,0);
+    }
+    80% {
+        transform: translate(90vw,0);
+    }
+    84% {
+        transform: translate(88vw, -3vh);
+    }
+    88% {
+        transform: translate(86vw, 0);
+    }
+    92% {
+        transform: translate(84vw, -2vh);
+    }
+    96% {
+        transform: translate(82vw, 0vh);
+    }
+    100% {
+        transform: translate(80vw, -1vh);
+    }
+    
+}
