@@ -273,12 +273,12 @@
 
 @keyframes ls_zoom {
     0% {
-        scale: 600%;
+        scale: 450%;
         opacity: 1;
     }
 
     100% {
-        scale: 180%;
+        scale: 170%;
         opacity: 1;
     }
 } 

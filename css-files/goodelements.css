@@ -117,7 +117,7 @@
         100% {
           transform: translate(250%, 150%);
           scale: 100%;
-          opacity: 0,5;
+          opacity: 1;
         }
       }
 
