@@ -1,121 +1,219 @@
-#bad1 {
-    width: 11%;
+#bad_element_container1 {
+    width: 100%;
     position: absolute;
     top: 2%;
     left: 83%;
     filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
-    animation: pulse_glow 2s linear infinite, move_across1 7s ease-in-out infinite;
+    z-index: 100;
 }
 
-@keyframes pulse_glow {
-    0% {
-        scale: 100%;
+#bad_element_sprite1 {
+    width: 11%
+}
+
+#bad_element_sprite_dissolve1 {
+    position: relative;
+    width: 27%;
+    top: 7vw;
+    left: -18%;
+}
+
+#bad_element_container2 {
+    width: 100%;
+    position: absolute;
+    top: 30vw;
+    left: 83%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    z-index: 99;
+}
+
+
+#bad_element_sprite2 {
+    width: 11%;
+}
+
+#bad_element_sprite_dissolve2 {
+    position: relative;
+    width: 27%;
+    top: 7vw;
+    left: -18%;
+}
+
+
+#bad_element_container3 {
+    width: 100%;
+    position: absolute;
+    top: 2%;
+    left: 8%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    z-index: 98;
+}
+
+#bad_element_sprite3 {
+    width: 11%;
+}
+
+#bad_element_sprite_dissolve3 {
+    position: relative;
+    width: 27%;
+    top: 6.5vw;
+    left: -18%;
+}
+
+
+#bad_element_container4 {
+    width: 100%;
+    position: absolute;
+    top: 45vw;
+    left: -18%;
+    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    z-index: 97;
     }
 
-    50% {
-        scale: 103%
-    }
+#bad_element_sprite4 {
+    width: 11%;
+}
 
-    100% {
-        scale: 100%;
-    }
+#bad_element_sprite_dissolve4 {
+    position: absolute;
+    width: 21%;
+    top: -6vw;
+    left: -4%;
+}
+
+/* animations */
+
+.move_across1 {
+    animation-name: move_across1;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 @keyframes move_across1 {
     0% {
-        transform: translate(-200%, -750%);
-        scale: 10%;
+        transform: translate(0, 0);
+        scale: 0%;
     }
 
     50% {
-        transform: translate(-400%, 125%);
+        transform: translate(-150%, 20%);
 
     }
   
     100% {
-      transform: translate(-950%, 150%);
-      scale: 100%;
-      opacity: 0,5;
+        transform: translate(95%, 550%);
+        scale: 100%;
     }
-  }
+}
 
-#bad2 {
-    width: 11%;
-    position: absolute;
-    top: 2%;
-    left: 83%;
-    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
-    animation: pulse_glow 2s linear infinite, move_across2 7s ease-in-out infinite;
-    animation-delay: 2s;
-    opacity: 0;
+.move_across2 {
+    animation-name: move_across2;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 @keyframes move_across2 {
     0% {
         transform: translate(400%, 750%);
         scale: 0%;
-        opacity: 1;
     }
 
     50% {
-        transform: translate(-400%, 425%);
+        transform: translate(-40%, 45%);
 
     }
   
     100% {
-      transform: translate(-950%, 250%);
+      transform: translate(-150%, -550%);
       scale: 100%;
-      opacity: 1;
     }
-  }
+}
 
-#bad3 {
-    width: 11%;
-    position: absolute;
-    top: 2%;
-    left: 8%;
-    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
-    animation: pulse_glow 2s linear infinite, move_across3 8s ease-in-out infinite;
-    }
+.move_across3 {
+    animation-name: move_across3;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
 
 @keyframes move_across3 {
     0% {
-        transform: translate(-100%, -650%);
-        scale: 10%;
-    }
-
-    50% {
-        transform: translate(-200%, 125%);
-
-    }
-    
-    100% {
-        transform: translate(950%, 150%);
-        scale: 100%;
-        opacity: 0,5;
-    }
-    }
-
-#bad4 {
-    width: 11%;
-    position: absolute;
-    top: 62%;
-    left: 8%;
-    transform: rotate(30deg);
-    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
-    animation: pulse_glow 2s linear infinite, move_across4 7s ease-in-out infinite;
-    }
-
-@keyframes move_across4 {
-    0% {
-        transform: translate(-200%, 500%);
+        transform: translate(-10%, -65%);
         scale: 0%;
     }
 
+    50% {
+        transform: translate(-20%, 125%);
+
+    }
     
     100% {
-        transform: translate(900%, -350%);
+        transform: translate(95%, 15%);
+        scale: 100%;
+    }
+}
+
+.move_across4 {
+    animation-name: move_across4;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move_across4 {
+    0% {
+        transform: translate(-100%, -500%);
+        scale: 0%;
+    }
+
+    50% {
+        transform: translate(25%, -400%);
+        scale: 50%;
+    }
+    
+    100% {
+        transform: translate(150%, -300%);
         scale: 100%;
         opacity: 0,5;
     }
+}
+
+.dissolve_up {
+    opacity: 0;
+    filter: blur(10px);
+    animation: fadeInBlur 1s ease-out;
+}
+  
+@keyframes fadeInBlur {
+    0% {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1);
     }
+    100% {
+      opacity: 0;
+      filter: blur(10px);
+      transform: scale(2);
+    }
+}
+
+.trace_hidden {
+    animation-name: trace_hidden;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes trace_hidden {
+    0% {
+      opacity: 0;
+      filter: blur(0);
+      transform: scale(1);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(10px);
+      transform: scale(2);
+    }
+}

@@ -258,9 +258,8 @@
     }
 }
 
-.time_element {
-    width: 100%;
-    scale: 10%;
+#time_element_container {
+    width: 300%;
     top: -40%;
     position: absolute;
     filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(137, 136, 141));
@@ -270,6 +269,11 @@
     animation-iteration-count: 1;
     opacity: 0;
 }
+
+#time_element_sprite {
+    width: 300%;
+}
+
 
 @keyframes ls_zoom {
     0% {

@@ -17,78 +17,97 @@
         <div id="game">
             <div id="game_bg">
                 <div id="game_elements">
-                    <div id="main_char_cointainer1">
-                        <img id="main_char_sprite1" src="svg/Jl1njA01.svg" alt=""> 
+                    <div id="main_char_container1">
+                        <img id="main_char_sprite1" src="svg/Jl1njA01.svg" alt="">
+                        <!-- <img id="main_char_sprite_lightning" src="svg/movement.gif" class="" alt=""> -->
                     </div>
-                    <div id="main_char_cointainer2">
+                    <div id="main_char_container2" class="">
                         <img id="main_char_sprite2" src="svg/Jl1njA01.svg" alt="">
                     </div>
-                    <div id="main_char_cointainer3">
+                    <div id="main_char_container3" class="">
                         <img id="main_char_sprite3" src="svg/Charbatchfill.png" alt="">
                     </div>
+                    <div id="main_element_container1">
+                        <img id="main_element_sprite1" src="svg/sprite_elementNEW.png" alt="">
+                        <img id="main_element_sprite_dissolve1" src="svg/impact1.gif" class="hidden" alt="">
+                    </div>
+                    <div id="main_element_container2">
+                        <img id="main_element_sprite2" src="svg/sprite_elementNEW.png" alt="">
+                        <img id="main_element_sprite_dissolve2" src="svg/impact1.gif" class="hidden" alt="">
+                    </div>
+                    <div id="main_element_container3">
+                        <img id="main_element_sprite3" src="svg/sprite_elementNEW.png" alt="">
+                        <img id="main_element_sprite_dissolve3" src="svg/impact1.gif" class="hidden" alt="">
+                    </div>
+                    <div id="main_element_container4">
+                        <img id="main_element_sprite4" src="svg/sprite_elementNEW.png" alt="">
+                        <img id="main_element_sprite_dissolve4" src="svg/impact1.gif" class="hidden" alt="">
+                    </div>
 
-                    <div class="main_element_cointainer1" id="me1">
-                        <img id="main_element_sprite1" src="svg/sprite_element.png" alt="">
-                        <!-- <img id="impact1" src="svg/impact1.gif" alt=""> -->
-                    </div>
-                    <div class="main_element_cointainer2" id="me2">
-                        <img id="main_element_sprite2" src="svg/sprite_element.png" alt="">
-                        <!-- <img id="impact2" src="svg/impact1.gif" alt=""> -->
-                    </div>
-                    <div class="main_element_cointainer3" id="me3">
-                        <img id="main_element_sprite3" src="svg/sprite_element.png" alt="">
-                        <!-- <img id="impact3" src="svg/sprite3compress.png" alt=""> -->
-                    </div>
-                    <div class="main_element_cointainer4" id="me4">
-                        <img id="main_element_sprite4" src="svg/sprite_element.png" alt="">
-                    </div>
-
-                    <div class="bad_element_cointainer1" id="bad1">
+                    <div id="bad_element_container1">
                         <img id="bad_element_sprite1" src="svg/elementbadinvert.png" alt="">
+                        <img id="bad_element_sprite_dissolve1" src="svg/impact3compress.gif" class="hidden" alt="">
                     </div>
-                    <div class="bad_element_cointainer2" id="bad2">
+                    <div id="bad_element_container2">
                         <img id="bad_element_sprite2" src="svg/elementbadinvert.png" alt="">
+                        <img id="bad_element_sprite_dissolve2" src="svg/impact3compress.gif" class="hidden" alt="">
                     </div>
-                    <div class="bad_element_cointainer3" id="bad3">
+                    <div id="bad_element_container3">
                         <img id="bad_element_sprite3" src="svg/elementbadinvert.png" alt="">
+                        <img id="bad_element_sprite_dissolve3" src="svg/impact3compress.gif" class="hidden" alt="">
                     </div>
-                    <div class="bad_element_cointainer4" id="bad4">
+                    <div id="bad_element_container4">
                         <img id="bad_element_sprite4" src="svg/elementbadinvert.png" alt="">
-                    </div>
+                        <img id="bad_element_sprite_dissolve4" src="svg/impact3compress.gif" class="hidden" alt="">
+                    </div>                    
+                    <div class="ls_container">    
+                        <div class="main_element_container" id="ls1">
+                            <img id="life_sprite1" src="svg/lifepoint-1.png" alt="">
+                        </div>
+                        <div class="main_element_container" id="ls2">
+                            <img id="life_sprite1" src="svg/lifepoint-2.png" alt="">
+                        </div>
+                        <div class="main_element_container" id="ls3">
+                            <img id="life_sprite1" src="svg/lifepoint-3.png" alt="">
+                        </div>
+                        <div class="main_element_container" id="ls4">
+                            <img id="life_sprite1" src="svg/lifepoint-4.png" alt="">
+                        </div>
+                        <div class="main_element_container" id="ls5">
+                            <img id="life_sprite1" src="svg/lifepoint-5.png" alt="">
+                        </div>
+                        <div class="main_element_container" id="ls6">
+                            <img id="life_sprite1" src="svg/lifepoint-6.png" alt="">
+                        </div>
+                        <div class="main_element_container" id="ls7">
+                            <img id="life_sprite1" src="svg/lifepoint-7.png" alt="">
+                        </div>
+                            <!-- <div class="time_element_container">
+                                <img id="time_element_sprite" src="svg/elementbadinvert.png" alt="">
+                            </div>
+                    </div>     -->
+                </div>
 
-                    
-                <div class="ls_container">    
-                    <div class="main_element_cointainer" id="ls1">
-                        <img id="life_sprite1" src="svg/lifepoint-1.png" alt="">
+                <div id="game_ui">
+                    <div id="score_board">
+                        <span id="element_count">0</span>
+                        <img id="element_image" src="svg/sprite_elementNEW.png">
                     </div>
-                    <div class="main_element_cointainer" id="ls2">
-                        <img id="life_sprite1" src="svg/lifepoint-2.png" alt="">
+                    <div id="life_board">                    
+                        <img id="life1" src="svg/LIVE.png" class="active_life">
+                        <img id="life2" src="svg/LIVE.png" class="active_life">
+                        <img id="life3" src="svg/LIVE.png" class="active_life">
                     </div>
-                    <div class="main_element_cointainer" id="ls3">
-                        <img id="life_sprite1" src="svg/lifepoint-3.png" alt="">
+                    <div id="time_board">
+                        <div id="time_left"></div>
                     </div>
-                    <div class="main_element_cointainer" id="ls4">
-                        <img id="life_sprite1" src="svg/lifepoint-4.png" alt="">
-                    </div>
-                    <div class="main_element_cointainer" id="ls5">
-                        <img id="life_sprite1" src="svg/lifepoint-5.png" alt="">
-                    </div>
-                    <div class="main_element_cointainer" id="ls6">
-                        <img id="life_sprite1" src="svg/lifepoint-6.png" alt="">
-                    </div>
-                    <div class="main_element_cointainer" id="ls7">
-                        <img id="life_sprite1" src="svg/lifepoint-7.png" alt="">
-                    </div>
-                <div class="time_element" id="time1">
-                    <img id="time_element" src="svg/elementbadinvert.png" alt="">
-                </div>
-                </div>    
-                </div>
-                
                 </div>
             </div>
         </div>
+        <div id="startscreen" class="hidden"></div>
+        <div id="game_over" class="hidden">u didn't do very well</div>
+        <div id="level_complete" class="hidden">u did good!</div>
     </div>
-<script src="script.js"></script>    
+    <script src="script.js"></script>    
 </body>
 </html>
