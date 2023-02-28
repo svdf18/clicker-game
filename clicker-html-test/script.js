@@ -36,7 +36,6 @@ const mainCharContainer3 = document.querySelector("#main_char_container3");
 
 const elementCount = document.querySelector("#element_count");
 
-
 let points = 0;
 let lives=0;
 
