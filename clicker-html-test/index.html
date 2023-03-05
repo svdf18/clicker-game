@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css-files/structure.css"/>
-    <link rel="stylesheet" href="../css-files/main.css"/>
-    <link rel="stylesheet" href="../css-files/goodelements.css"/>
-    <link rel="stylesheet" href="../css-files/badelements.css"/>
-    <link rel="stylesheet" href="../css-files/lifesprites.css"/>
+    <link rel="stylesheet" href="css-files/structure.css"/>
+    <link rel="stylesheet" href="css-files/main.css"/>
+    <link rel="stylesheet" href="css-files/goodelements.css"/>
+    <link rel="stylesheet" href="css-files/badelements.css"/>
+    <link rel="stylesheet" href="css-files/lifesprites.css"/>
 </head>
 
 <body>
     <div id="screen">
         <div id="game">
             <div id="game_bg">
-                <div id="game_elements">
+                <div id="game_elements" class="">
                     <div id="main_char_container1">
                         <img id="main_char_sprite1" src="svg/Jl1njA01.svg" alt="">
-                        <!-- <img id="main_char_sprite_lightning" src="svg/movement.gif" class="" alt=""> -->
+                        <img id="main_char_sprite_lightning" src="svg/movement.gif" class="hidden" alt="">
                     </div>
                     <div id="main_char_container2" class="">
                         <img id="main_char_sprite2" src="svg/Jl1njA01.svg" alt="">
@@ -60,34 +60,21 @@
                         <img id="bad_element_sprite4" src="svg/elementbadinvert.png" alt="">
                         <img id="bad_element_sprite_dissolve4" src="svg/impact3compress.gif" class="hidden" alt="">
                     </div>                    
-                    <div class="ls_container">    
-                        <div class="main_element_container" id="ls1">
-                            <img id="life_sprite1" src="svg/lifepoint-1.png" alt="">
-                        </div>
-                        <div class="main_element_container" id="ls2">
-                            <img id="life_sprite1" src="svg/lifepoint-2.png" alt="">
-                        </div>
-                        <div class="main_element_container" id="ls3">
-                            <img id="life_sprite1" src="svg/lifepoint-3.png" alt="">
-                        </div>
-                        <div class="main_element_container" id="ls4">
-                            <img id="life_sprite1" src="svg/lifepoint-4.png" alt="">
-                        </div>
-                        <div class="main_element_container" id="ls5">
-                            <img id="life_sprite1" src="svg/lifepoint-5.png" alt="">
-                        </div>
-                        <div class="main_element_container" id="ls6">
-                            <img id="life_sprite1" src="svg/lifepoint-6.png" alt="">
-                        </div>
-                        <div class="main_element_container" id="ls7">
-                            <img id="life_sprite1" src="svg/lifepoint-7.png" alt="">
-                        </div>
-                            <!-- <div class="time_element_container">
-                                <img id="time_element_sprite" src="svg/elementbadinvert.png" alt="">
-                            </div>
-                    </div>     -->
+                    
                 </div>
 
+                <div id="time_board">
+                    <div id="time_container">    
+                        <img id="time_sprite1" src="svg/LIVE.png" alt="">
+                        <img id="time_sprite2" src="svg/lifepoint-2.png" alt="">
+                        <img id="time_sprite3" src="svg/lifepoint-3.png" alt="">
+                        <img id="time_sprite4" src="svg/lifepoint-4.png" alt="">
+                        <img id="time_sprite5" src="svg/lifepoint-5.png" alt="">
+                        <img id="time_sprite6" src="svg/lifepoint-6.png" alt="">
+                        <img id="time_sprite7" src="svg/lifepoint-7.png" alt="">
+                        <img id="time_line" src="svg/timeLine.png" alt="">
+                    </div>
+                </div>
                 <div id="game_ui">
                     <div id="score_board">
                         <span id="element_count">0</span>
@@ -98,16 +85,45 @@
                         <img id="life2" src="svg/LIVE.png" class="active_life">
                         <img id="life3" src="svg/LIVE.png" class="active_life">
                     </div>
-                    <div id="time_board">
-                        <div id="time_left"></div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
-        <div id="startscreen" class="hidden"></div>
-        <div id="game_over" class="hidden">u didn't do very well</div>
-        <div id="level_complete" class="hidden">u did good!</div>
+        <div id="startscreen">
+            <button id="btn_start" class="pulse">start game</button>
+        </div>
+        <div id="game_over" class="hidden">
+            <p>u didn't do very well</p>
+            <button id="btn_restart" class="">restart game</button>
+        </div>
+        <div id="level_complete" class="hidden">
+            <p>u did good</p>
+            <button id="btn_go_to_start" class="">go to start game</button>
+        </div>
+
     </div>
+
+    <audio id="audio_bg" src="audio/audiobg.mp3" loop></audio>
+    <audio id="audio_bg2" src="audio/audiobg2.mp3" loop></audio>
+    <audio id="good1_audio" src="audio/good1_audio.mp3" loop></audio>
+    <audio id="good2_audio" src="audio/good2_audio.mp3" loop></audio>
+    <audio id="good3_audio" src="audio/good3_audio.mp3" loop></audio>
+    <audio id="good4_audio" src="audio/good4_audio.mp3" loop></audio>
+    <audio id="good5_audio" src="audio/good5_audio.mp3" loop></audio>
+    <audio id="good6_audio" src="audio/good6_audio.mp3" loop></audio>
+    <audio id="good7_audio" src="audio/good7_audio.mp3" loop></audio>
+    <audio id="good8_audio" src="audio/good8_audio.mp3" loop></audio>
+    <audio id="good9_audio" src="audio/good9_audio.mp3" loop></audio>
+    <audio id="good10_audio" src="audio/good10_audio.mp3" loop></audio>
+    <audio id="good11_audio" src="audio/good11_audio.mp3" loop></audio>
+    <audio id="good12_audio" src="audio/good12_audio.mp3" loop></audio>
+    <audio id="hit1_audio" src="audio/hit1_audio.mp3"></audio>
+    <audio id="hit2_audio" src="audio/hit2_audio.mp3"></audio>
+    <audio id="hit3_audio" src="audio/hit3_audio.mp3"></audio>
+    <audio id="hit4_audio" src="audio/hit4_audio.mp3"></audio>
+    <audio id="life1_audio" src="audio/life1_audio.mp3"></audio>
+    <audio id="life2_audio" src="audio/life2_audio.mp3"></audio>
+
     <script src="script.js"></script>    
 </body>
 </html>

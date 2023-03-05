@@ -39,13 +39,111 @@ const elementCount = document.querySelector("#element_count");
 let points = 0;
 let lives=0;
 
-window.addEventListener("load", start);
+window.addEventListener("load", ready);
 
-function start() {
+function ready() {
     console.log("js running ye!");
+    document.querySelector("#btn_start").addEventListener("click", startGame);
+    document.querySelector("#btn_restart").addEventListener("click", startGame);
+    document.querySelector("#btn_go_to_start").addEventListener("click", showStartScreen);
+}
 
-    points = 0;
+function showGameScreen(){
+    document.querySelector("#startscreen").classList.add("hidden");
+    document.querySelector("#game_over").classList.add("hidden");
+    document.querySelector("#level_complete").classList.add("hidden");
+
+
+}
+
+function showStartScreen(){
+    document.querySelector("#startscreen").classList.remove("hidden");
+    document.querySelector("#game_over").classList.add("hidden");
+    document.querySelector("#level_complete").classList.add("hidden");
+
+}
+
+function showMainChars(){
+    mainCharContainer1.classList.remove("hidden");
+    mainCharContainer2.classList.remove("hidden");
+    mainCharContainer3.classList.remove("hidden");
+
+}
+
+function showElements(){
+    mainElementContainer1.classList.remove("hidden");
+    mainElementContainer2.classList.remove("hidden");
+    mainElementContainer3.classList.remove("hidden");
+    mainElementContainer4.classList.remove("hidden");
+
+    badElementContainer1.classList.remove("hidden");
+    badElementContainer2.classList.remove("hidden");
+    badElementContainer3.classList.remove("hidden");
+    badElementContainer4.classList.remove("hidden");
+
+}
+
+function randomAudio1(){
+    if (Math.random() < 0.25) {
+        document.querySelector("#good1_audio").play();   
+    } else if (Math.random() >= 0.25 <0.5) {
+        document.querySelector("#good2_audio").play();
+    } else if (Math.random() >= 0.5 <0.75) {
+        document.querySelector("#good9_audio").play();
+    } else if (Math.random() >= 0.75) {
+        document.querySelector("#good12_audio").play();
+    }
+}
+
+function randomAudio2(){
+
+    if (Math.random() < 0.25) {
+        document.querySelector("#good5_audio").play();   
+    } else if (Math.random() >= 0.25 <0.5) {
+        document.querySelector("#life1_audio").play();
+    } else if (Math.random() >= 0.5 <0.75) {
+        document.querySelector("#life2_audio").play();
+    } else if (Math.random() >= 0.75) {
+        document.querySelector("#good8_audio").play();
+    }
+}
+
+function resetAudio(){
+    document.querySelector("#audio_bg").pause();
+    document.querySelector("#audio_bg2").pause();
+}
+
+function resetLives(){
     lives = 3;
+
+    document.querySelector("#life1").classList.remove("broken_life");
+    document.querySelector("#life2").classList.remove("broken_life");
+    document.querySelector("#life3").classList.remove("broken_life");
+    document.querySelector("#life1").classList.add("active_life");
+    document.querySelector("#life2").classList.add("active_life");
+    document.querySelector("#life3").classList.add("active_life");
+}
+
+function resetPoints(){
+    points = 0;
+    displayPoints();
+
+}
+
+function startGame(){
+    resetLives();
+    resetPoints();
+    showGameScreen();
+    showMainChars();
+    showElements();
+    resetAudio();
+    startTimer();
+
+    document.querySelector("#startscreen").classList.add("hidden");
+    document.querySelector("#game_over").classList.add("hidden");
+
+    document.querySelector("#audio_bg").play();
+    document.querySelector("#audio_bg2").play();
 
     mainElementContainer1.classList.add("move_center1");
     mainElementContainer2.classList.add("move_center2");
@@ -61,6 +159,8 @@ function start() {
     mainCharContainer2.classList.add("pulse");
     mainCharContainer3.classList.add("pulse");
 
+    // document.querySelector("#game_elements").addEventListener("click", clickMc);
+
     
     mainElementContainer1.addEventListener("click", clickMe1);
     mainElementContainer2.addEventListener("click", clickMe2);
@@ -72,6 +172,8 @@ function start() {
     badElementContainer3.addEventListener("click", clickBe3);
     badElementContainer4.addEventListener("click", clickBe4);
 
+
+
 }
 
 function clickMe1() {
@@ -81,10 +183,14 @@ function clickMe1() {
     mainElementSprite1.classList.add("dissolve");
     mainElementGif1.classList.remove("hidden");
     mainElementContainer1.addEventListener("animationend", goneMe1);
+
+    document.querySelector("#hit1_audio").play().volume = 0.1;
+
+    randomAudio1();
     incrementPoints();
 }
 
-//points/trace/slow down TIME ani
+//trace/slow down TIME ani
 
 function goneMe1() {
     mainElementContainer1.removeEventListener("animationend", goneMe1)
@@ -94,6 +200,11 @@ function goneMe1() {
     mainElementContainer1.offsetWidth;
     mainElementGif1.classList.add("hidden");
     mainElementContainer1.classList.add("move_center1");
+    // mainElement.classList.remove("#good1_audio", "#good2_audio", "#good3_audio", "#good4_audio", "#good5_audio", "#good6_audio", "#good7_audio", "#good8_audio");
+
+    // const randomAudio = Math.floor(Math.random() * 8) + 1;
+    // mainElement.add(`position${randomAudio}`);
+
     mainElementContainer1.addEventListener("click", clickMe1);
 }
 
@@ -104,10 +215,14 @@ function clickMe2() {
     mainElementSprite2.classList.add("dissolve");
     mainElementGif2.classList.remove("hidden");
     mainElementContainer2.addEventListener("animationend", goneMe2);
+
+    document.querySelector("#hit2_audio").play().volume = 0.1;
+
+    randomAudio1();
     incrementPoints();
 }
 
-//points/trace/slow down TIME ani
+//trace/slow down TIME ani
 
 function goneMe2() {
     mainElementContainer2.removeEventListener("animationend", goneMe2)
@@ -127,10 +242,27 @@ function clickMe3() {
     mainElementSprite3.classList.add("dissolve");
     mainElementGif3.classList.remove("hidden");
     mainElementContainer3.addEventListener("animationend", goneMe3);
+
+    document.querySelector("#hit3_audio").play().volume = 0.1;
+
+    function randomAudio2(){
+
+        if (Math.random() < 0.25) {
+            document.querySelector("#good5_audio").play();   
+        } else if (Math.random() >= 0.25 <0.5) {
+            document.querySelector("#life1_audio").play();
+        } else if (Math.random() >= 0.5 <0.75) {
+            document.querySelector("#life2_audio").play();
+        } else if (Math.random() >= 0.75) {
+            document.querySelector("#good8_audio").play();
+        }
+    }
+
+    randomAudio2();
     incrementPoints();
 }
 
-//points/trace/slow down TIME ani
+//trace/slow down TIME ani
 
 function goneMe3() {
     mainElementContainer3.removeEventListener("animationend", goneMe3)
@@ -150,9 +282,13 @@ function clickMe4() {
     mainElementSprite4.classList.add("dissolve");
     mainElementGif4.classList.remove("hidden");
     mainElementContainer4.addEventListener("animationend", goneMe4);
+
+    document.querySelector("#hit4_audio").play().volume = "0.1";
+
+    randomAudio2();
     incrementPoints();
 }
-//points/trace/slow down TIME ani
+//trace/slow down TIME ani
 
 function goneMe4() {
     mainElementContainer4.removeEventListener("animationend", goneMe4)
@@ -174,7 +310,7 @@ function clickBe1() {
     badElementContainer1.addEventListener("animationend", goneBe1);
     decrementLives();
 }
-//trace/decrement lives/speedup animation TIME
+//trace/speedup animation TIME
 
 function goneBe1() {
     badElementContainer1.removeEventListener("animationend", goneBe1);
@@ -197,7 +333,7 @@ function clickBe2() {
     decrementLives();
 }
 
-//trace/decrement lives/speedup animation TIME
+//trace/speedup animation TIME
 
 function goneBe2() {
     badElementContainer2.removeEventListener("animationend", goneBe2);
@@ -220,7 +356,7 @@ function clickBe3() {
     decrementLives();
 }
 
-//trace/decrement lives/speedup animation TIME
+//trace/speedup animation TIME
 
 function goneBe3() {
     badElementContainer3.removeEventListener("animationend", goneBe3);
@@ -244,7 +380,7 @@ function clickBe4() {
 }
 
 
-//trace/decrement lives/speedup animation TIME
+//trace/speedup animation TIME
 
 function goneBe4() {
     badElementContainer4.removeEventListener("animationend", goneBe4);
@@ -259,12 +395,26 @@ function goneBe4() {
 
 //////
 
+function startTimer(){
+    document.querySelector("#time_sprite1").classList.add("pulse_glow_ts1");
+    document.querySelector("#time_sprite2").classList.add("pulse_glow_ts2_ts5");
+    document.querySelector("#time_sprite3").classList.add("pulse_glow_ts3_ts6");
+    document.querySelector("#time_sprite4").classList.add("pulse_glow_ts4_ts7");
+    document.querySelector("#time_sprite5").classList.add("pulse_glow_ts2_ts5");
+    document.querySelector("#time_sprite6").classList.add("pulse_glow_ts3_ts6");
+    document.querySelector("#time_sprite7").classList.add("pulse_glow_ts4_ts7");
+    document.querySelector("#time_line").classList.add("shrink");
+
+
+    document.querySelector("#time_sprite1").addEventListener("animationend", timeIsUp);
+}
+
 function incrementPoints(){
     console.log("increment points");
     points++;
     console.log("har nu " + points + " points"); 
     displayPoints();
-    if (points >= 3){
+    if (points >= 50){
         levelComplete();
     }
 }
@@ -274,14 +424,14 @@ function displayPoints(){
     elementCount.textContent = points;
 }
 
-function decrementLives(){
-    console.log("decrement lives");
-    if (lives <= 1) {
-        gameOver();
-    }
-    displayDecrementedLives();
-    lives--;
-}
+// function decrementLives(){
+//     console.log("decrement lives");
+//     if (lives <= 1) {
+//         gameOver();
+//     }
+//     displayDecrementedLives();
+//     lives--;
+// }
 
 function displayDecrementedLives(){
     console.log("decrement lives");
@@ -292,7 +442,18 @@ function displayDecrementedLives(){
 function gameOver(){
     console.log("game over");
     document.querySelector("#game_over").classList.remove("hidden");
+    document.querySelector("#audio_bg").pause();
+    document.querySelector("#audio_bg2").pause();
     stop();
+}
+
+function timeIsUp(){
+    console.log("times up");
+    if (points >= 50) {
+        levelComplete();
+    } else {
+        gameOver();
+    }
 }
 
 function levelComplete(){
@@ -327,7 +488,6 @@ function stop() {
     mainCharContainer1.classList.add("hidden");
     mainCharContainer2.classList.add("hidden");
     mainCharContainer3.classList.add("hidden");
-
 }
 
 // const mainCharContainer1 = document.querySelector("#main_char_container1");
