@@ -1,5 +1,6 @@
 #main_element_container1 {
-    width: 100%;
+    width: 11%;
+    height: 14vw;
     position: absolute;
     top: -14vw;
     left: 85%;
@@ -8,74 +9,77 @@
 }
 
 #main_element_sprite1 {
-    width: 11%;
+    width: 100%;
 }
 
 #main_element_sprite_dissolve1 {
     position: relative;
-    width: 21%;
-    top: 1vw;
-    left: -17%;
+    width: 210%;
+    top: -17vw;
+    left: -50%;
 }
 
 #main_element_container2 {
-    width: 100%;
+    width: 11%;
+    height: 14vw;
     position: absolute;
     top: 40vw;
-    left: 85%;
+    left: 100%;
     filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(124, 98, 227));
     z-index: 91;
 }
 
 #main_element_sprite2 {
-    width: 11%;
+    width: 100%;
 }
 
 #main_element_sprite_dissolve2 {
     position: relative;
-    width: 21%;
-    top: 0.5vw;
-    left: -16.5%;
+    width: 210%;
+    top: -17vw;
+    left: -50%;
 }
 
 #main_element_container3 {
-    width: 100%;
+    width: 11%;
+    height: 14vw;
     position: absolute;
     top: 40vw;
-    left: 7%;
+    left: -11%;
     filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(24, 137, 129));
     z-index: 92;
 }
 
 #main_element_sprite3 {
-    width: 11%;
+    width: 100%;
 }
 
 #main_element_sprite_dissolve3 {
     position: relative;
-    width: 21%;
-    top: 0.5vw;
-    left: -16.5%;
+    width: 230%;
+    top: -18vw;
+    left: -65%;
 }
 
 #main_element_container4 {
-    width: 100%;
+    width: 11%;
+    height: 14vw;
     position: absolute;
     top: 0vw;
-    left: 7%;
+    left: -11%;
     filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(197, 174, 111));
     z-index: 93;
 }
 
 #main_element_sprite4 {
-    width: 11%;
+    width: 100%;
 }
 
 #main_element_sprite_dissolve4 {
     position: relative;
-    width: 21%;
-    top: 0.5vw;
-    left: -17%;
+    width: 210%;
+    top: -17vw;
+    left: -50%;
 }
 
 
@@ -83,54 +87,57 @@
 
 .move_center1 {
     animation-name: move_center1;
-    animation-duration: 4s;
+    animation-duration: 7s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-delay: 200ms;
 }
 
-    @keyframes move_center1 {
-        0% {
-            transform: translate(0, 100%);
-            scale: 10%;
-        }
-
-        50% {
-            transform: translate(-150%, 160%);
-
-        }
-
-        100% {
-            transform: translate(-45%, 280%);
-            scale: 100%;
-        }
-    }
-
-/* .adjust1 {
-    animation-name: move_center1_adjusted;
-}
-
-
-@keyframes move_center1_adjusted {
+@keyframes move_center1 {
     0% {
-        transform: translate(0, 100%);
+        transform: translate(0%, 0%);
         scale: 10%;
     }
 
     50% {
-        transform: translate(-150%, 160%);
+        transform: translate(-1150%, 220%);
 
     }
 
     100% {
-        transform: translate(-45%, 280%);
+        transform: translate(165%, 380%);
         scale: 100%;
     }
-} */
+}
+
+.move_center1_adjust {
+    animation-name: move_center1_adjust;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 500ms;
+}
+
+@keyframes move_center1_adjust {
+    0% {
+        transform: translate(0%, 150%);
+        scale: 10%;
+    }
+
+    50% {
+        transform: translate(-150%, 220%);
+
+    }
+
+    100% {
+        transform: translate(-965%, 480%);
+        scale: 100%;
+    }
+}
 
 .move_center2 {
     animation-name: move_center2;
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
@@ -138,13 +145,42 @@
     @keyframes move_center2 {
         0% {
             transform: translate(-220%, 20%);
-            scale: 10%;
+            scale: 0%;
         }
 
+        50% {
+            transform: translate(-900%, -150%)
+        }
+
+       
         100% {
-            transform: translate(-20%, -100%);
+            transform: translate(300%, -200%);
             scale: 100%;
-    
+        }
+    }
+
+.move_center2_adjust {
+    animation-name: move_center2_adjust;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 300ms;
+}
+
+    @keyframes move_center2_adjust {
+        0% {
+            transform: translate(-210%, 50%);
+            scale: 0%;
+        }
+
+        50% {
+            transform: translate(-900%, -150%)
+        }
+
+        
+        100% {
+            transform: translate(-1200%, -500%);
+            scale: 100%;
         }
     }
 
@@ -160,15 +196,37 @@
             scale: 0%;
         }
 
-        50% {
-            transform: translate(-20%, 0%);
+        20% {
+            transform: translate(1750%, -275%);
         }
     
       
         100% {
-          transform: translate(40%, -5%);
+          transform: translate(-160%, -305%);
           scale: 100%;
-          opacity: 0,5;
+        }
+    }
+
+.move_center3_adjust {
+    animation-name: move_center3_adjust;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+    @keyframes move_center3_adjust {
+        0% {
+            transform: translate(-150%, 125%);
+            scale: 0%;
+        }
+
+        20% {
+            transform: translate(1950%, -175%);
+        }
+    
+        
+        100% {
+            transform: translate(-180%, -405%);
+            scale: 100%;
         }
     }
 
@@ -176,25 +234,51 @@
     animation-name: move_center4;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
+    animation-delay: 1s;
     animation-iteration-count: infinite;
 }
 
     @keyframes move_center4 {
         0% {
-            transform: translate(10%, 65%);
+            transform: translate(10%, -15%);
             scale: 0%;
         }
     
         50% {
-            transform: translate(100%, -80%);
+            transform: translate(1400%, 180%);
     
         }
       
         100% {
-          transform: translate(50%, 50%);
-          scale: 100%;
+            transform: translate(100%, 380%);
+            scale: 100%;
         }
       }
+
+.move_center4_adjust {
+    animation-name: move_center4_adjust;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+}
+
+    @keyframes move_center4_adjust {
+        0% {
+            transform: translate(100%, -15%);
+            scale: 0%;
+        }
+
+        50% {
+            transform: translate(900%, 280%);
+
+        }
+        
+        100% {
+            transform: translate(150%, 350%);
+            scale: 100%;
+        }
+    }
 
 
 
@@ -232,7 +316,7 @@
 .dissolve {
     opacity: 0;
     filter: blur(10px);
-    animation: fadeInBlur 1s ease-out;
+    animation: fadeInBlur 2s ease-out;
 }
   
 @keyframes fadeInBlur {
@@ -245,37 +329,3 @@
       filter: blur(10px);
     }
 }
-
-
-/* gifsss */
-
-/* #impact1 {
-    width: relative;
-    position: relative;
-    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(184, 34, 167));
-    display: hidden;
-} */
-
-/* #impact2 {
-    width: 250%;
-    position: absolute;
-    top: -28%;
-    left: -75%;
-    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(124, 98, 227));
-    animation-name: pulse_glow;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-#impact3 {
-    width: 250%;
-    position: absolute;
-    top: -28%;
-    left: -75%;
-    filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(24, 137, 129));
-    animation-name: pulse_glow;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-} */

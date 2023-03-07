@@ -18,6 +18,7 @@
     top: 2%;
     left: 45%;
     filter: blur(1.2px) drop-shadow(0 0 0.75rem rgb(137, 136, 141));
+    z-index: 3;
 }
 
 #time_sprite2 {
@@ -77,9 +78,12 @@
 #time_line {
     width: 340%;
     position: relative;
-    top: -14%;
-    left: 179%;
+    top: -20%;
+    left: 178%;
     filter: blur(2.7px) drop-shadow(0 0 0.75rem rgb(137, 136, 141));
+    transform-origin: center;
+    opacity: 0;
+    z-index: 1;
 }
 
 /* animations */
@@ -96,7 +100,7 @@
         opacity: 1;
     }
 
-    50% {
+    95% {
         opacity: 1;
     }
 
@@ -122,7 +126,7 @@
         opacity: 1;
     }
 
-    50% {
+    80% {
         scale: 103%;
         transform: rotate(-1deg);
         opacity: 1;
@@ -168,7 +172,7 @@
 
 .pulse_glow_ts4_ts7 {
         animation-name: pulse_glow_ts4_ts7;
-        animation-duration: 90s;
+        animation-duration: 70s;
         animation-delay: 0s;
         animation-timing-function: linear;
         animation-iteration-count: 1;
@@ -197,7 +201,7 @@
 
 .shrink {
     animation-name: shrink;
-    animation-duration: 2 s;
+    animation-duration: 180s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -205,12 +209,12 @@
 
 @keyframes shrink{
     0% {
-        scale: 0;
-        opacity: 0.6;
+        scale: 1 1;
+        opacity: 0.6;   
     }
 
     100% {
-        scale: 1;
+        scale: 0 1;
         opacity: 0.6;
     }
 }

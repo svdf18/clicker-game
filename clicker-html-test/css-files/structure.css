@@ -9,6 +9,7 @@ body {
     grid-template-rows: 100%;
     width: 100%;
 }
+
 #game {
     grid-area: 1 / 1;
     background-color: blue;
@@ -33,13 +34,12 @@ body {
 
 #game_ui {
     position: absolute;
-    top: 50%;
+    top: 4%;
     right: 1vw;
     color: white;
-    font-size: 2em;
     font-family: sans-serif;
+    font-size: 2em;
     pointer-events: none;
-
 }
 
 #score_board {
@@ -55,7 +55,7 @@ body {
 
 #element_image {
     width: 1em;
-    filter: invert(1) blur(.4px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+    filter: invert(1) blur(.4px) drop-shadow(0 0 0.75rem rgb(166, 92, 92));
 }
 
 #life_board {
@@ -85,6 +85,7 @@ body {
     justify-content: center;
     align-content: center;
     background-image: linear-gradient(150deg, rgb(233, 238, 233) 0%, rgba(239, 191, 239, 0.267) 100%);
+    
 }
 
 button {
@@ -116,6 +117,7 @@ button {
     align-content: center;
     background-image: linear-gradient(150deg, rgb(233, 238, 233) 0%, rgba(239, 191, 239, 0.267) 100%);
 }
+
 #game_over.hidden, #level_complete.hidden {
     display: none;
 }

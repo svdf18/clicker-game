@@ -1,68 +1,70 @@
 #bad_element_container1 {
-    width: 100%;
+    width: 11%;
+    height: 50%;
     position: absolute;
     top: 2%;
-    left: 83%;
+    left: 100%;
     filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
     z-index: 100;
 }
 
 #bad_element_sprite1 {
-    width: 11%
+    width: 100%
 }
 
 #bad_element_sprite_dissolve1 {
     position: relative;
-    width: 27%;
-    top: 7vw;
-    left: -18%;
+    width: 260%;
+    top: -22vw;
+    left: -72%;
 }
 
 #bad_element_container2 {
-    width: 100%;
+    width: 11%;
+    height: 9vw;
     position: absolute;
     top: 30vw;
-    left: 83%;
+    left: 100%;
     filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
     z-index: 90;
 }
 
 
 #bad_element_sprite2 {
-    width: 11%;
+    width: 100%;
 }
 
 #bad_element_sprite_dissolve2 {
     position: relative;
-    width: 27%;
-    top: 7vw;
-    left: -18%;
+    width: 260%;
+    top: -22vw;
+    left: -72%;
 }
 
 
 #bad_element_container3 {
-    width: 100%;
+    width: 11%;
     position: absolute;
     top: 2%;
-    left: 8%;
+    left: -11%;
     filter: blur(1.7px) drop-shadow(0 0 0.75rem rgb(0, 0, 0));
     z-index: 98;
 }
 
 #bad_element_sprite3 {
-    width: 11%;
+    width: 100%;
 }
 
 #bad_element_sprite_dissolve3 {
-    position: relative;
-    width: 27%;
-    top: 6.5vw;
-    left: -18%;
+    position: absolute;
+    width: 270%;
+    top: -10vw;
+    left: -72%;
 }
 
 
 #bad_element_container4 {
-    width: 100%;
+    width: 11%;
     position: absolute;
     top: 45vw;
     left: -18%;
@@ -71,57 +73,57 @@
     }
 
 #bad_element_sprite4 {
-    width: 11%;
+    width: 100%;
 }
 
 #bad_element_sprite_dissolve4 {
     position: absolute;
-    width: 21%;
-    top: -6vw;
-    left: -4%;
+    width: 210%;
+    top: -7vw;
+    left: -50%;
 }
 
 /* animations */
 
 .move_across1 {
     animation-name: move_across1;
-    animation-duration: 15s;
+    animation-duration: 12s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
 
 @keyframes move_across1 {
     0% {
-        transform: translate(0, 0);
+        transform: translate(0%, 0%);
         scale: 0%;
     }
 
     50% {
-        transform: translate(-150%, 20%);
+        transform: translate(-1400%, 2000%);
 
     }
   
     100% {
-        transform: translate(95%, 550%);
+        transform: translate(195%, 0);
         scale: 100%;
     }
 }
 
 .move_across2 {
     animation-name: move_across2;
-    animation-duration: 12s;
+    animation-duration: 10s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
 
 @keyframes move_across2 {
     0% {
-        transform: translate(400%, 750%);
+        transform: translate(40%, 75%);
         scale: 0%;
     }
 
     50% {
-        transform: translate(-40%, 45%);
+        transform: translate(-1200%, 45%);
 
     }
   
@@ -140,17 +142,16 @@
 
 @keyframes move_across3 {
     0% {
-        transform: translate(-10%, -65%);
+        transform: translate(0%, 0%);
         scale: 0%;
     }
-
-    50% {
-        transform: translate(-20%, 125%);
-
-    }
     
+    50% {
+        transform: translate(1415%, 285%);
+    }
+
     100% {
-        transform: translate(95%, 15%);
+        transform: translate(-100%, 550%);
         scale: 100%;
     }
 }
@@ -164,19 +165,18 @@
 
 @keyframes move_across4 {
     0% {
-        transform: translate(-100%, -500%);
+        transform: translate(0%, 0%);
         scale: 0%;
     }
 
     50% {
-        transform: translate(25%, -400%);
-        scale: 50%;
-    }
-    
-    100% {
-        transform: translate(150%, -300%);
+        transform: translate(800%, -200%);
         scale: 100%;
-        opacity: 0,5;
+    }
+
+    100% {
+        transform: translate(0%, -400%);
+        scale: 100%;
     }
 }
 

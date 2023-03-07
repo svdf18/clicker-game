@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css-files/main.css"/>
     <link rel="stylesheet" href="css-files/goodelements.css"/>
     <link rel="stylesheet" href="css-files/badelements.css"/>
-    <link rel="stylesheet" href="css-files/lifesprites.css"/>
+    <link rel="stylesheet" href="css-files/timeelements.css"/>
 </head>
 
 <body>
@@ -19,28 +19,28 @@
                 <div id="game_elements" class="">
                     <div id="main_char_container1">
                         <img id="main_char_sprite1" src="svg/Jl1njA01.svg" alt="">
-                        <img id="main_char_sprite_lightning" src="svg/movement.gif" class="hidden" alt="">
                     </div>
                     <div id="main_char_container2" class="">
                         <img id="main_char_sprite2" src="svg/Jl1njA01.svg" alt="">
                     </div>
                     <div id="main_char_container3" class="">
                         <img id="main_char_sprite3" src="svg/Charbatchfill.png" alt="">
+                        <img id="main_char_gif" src="svg/sphere6.gif" alt="">
                     </div>
                     <div id="main_element_container1">
-                        <img id="main_element_sprite1" src="svg/sprite_elementNEW.png" alt="">
+                        <img id="main_element_sprite1" src="svg/sprite_elementNEWresize.png" alt="">
                         <img id="main_element_sprite_dissolve1" src="svg/impact1.gif" class="hidden" alt="">
                     </div>
                     <div id="main_element_container2">
-                        <img id="main_element_sprite2" src="svg/sprite_elementNEW.png" alt="">
+                        <img id="main_element_sprite2" src="svg/sprite_elementNEWresize.png" alt="">
                         <img id="main_element_sprite_dissolve2" src="svg/impact1.gif" class="hidden" alt="">
                     </div>
                     <div id="main_element_container3">
-                        <img id="main_element_sprite3" src="svg/sprite_elementNEW.png" alt="">
+                        <img id="main_element_sprite3" src="svg/sprite_elementNEWresize.png" alt="">
                         <img id="main_element_sprite_dissolve3" src="svg/impact1.gif" class="hidden" alt="">
                     </div>
                     <div id="main_element_container4">
-                        <img id="main_element_sprite4" src="svg/sprite_elementNEW.png" alt="">
+                        <img id="main_element_sprite4" src="svg/sprite_elementNEWresize.png" alt="">
                         <img id="main_element_sprite_dissolve4" src="svg/impact1.gif" class="hidden" alt="">
                     </div>
 
@@ -59,7 +59,7 @@
                     <div id="bad_element_container4">
                         <img id="bad_element_sprite4" src="svg/elementbadinvert.png" alt="">
                         <img id="bad_element_sprite_dissolve4" src="svg/impact3compress.gif" class="hidden" alt="">
-                    </div>                    
+                    </div>
                     
                 </div>
 
@@ -72,33 +72,36 @@
                         <img id="time_sprite5" src="svg/lifepoint-5.png" alt="">
                         <img id="time_sprite6" src="svg/lifepoint-6.png" alt="">
                         <img id="time_sprite7" src="svg/lifepoint-7.png" alt="">
-                        <img id="time_line" src="svg/timeLine.png" alt="">
+                        <img id="time_line" src="svg/timeline2.png" class="" alt="">
                     </div>
                 </div>
-                <div id="game_ui">
+                <div id="game_ui" class="hidden">
                     <div id="score_board">
                         <span id="element_count">0</span>
-                        <img id="element_image" src="svg/sprite_elementNEW.png">
+                        <img id="element_image" src="svg/sprite_elementNEWresize.png">
                     </div>
                     <div id="life_board">                    
                         <img id="life1" src="svg/LIVE.png" class="active_life">
                         <img id="life2" src="svg/LIVE.png" class="active_life">
                         <img id="life3" src="svg/LIVE.png" class="active_life">
+                        <img id="life4" src="svg/LIVE.png" class="active_life">
+                        <img id="life5" src="svg/LIVE.png" class="active_life">
+                        <img id="life6" src="svg/LIVE.png" class="active_life">
                     </div>
                     
                 </div>
             </div>
         </div>
         <div id="startscreen">
-            <button id="btn_start" class="pulse">start game</button>
+            <button id="btn_start" class="pulse">S̷T̸À̵̻͕̫̱̍Ṟ̸͎͊̓́̄̂̕͠T̶̻̟̠̺̀̏͐̃̅͗̆̍͊̕ ̶̷̢̞̙̥͓̮̪̯͍̤͋̌̈́̎̉̓̽̋̌͛͐̚͠ͅĠ̵̞̰̘̯̓̿́͐̂Â̷̱̹̄ͅM̸̱̰̈́E̸̞͒</button>
         </div>
         <div id="game_over" class="hidden">
             <p>u didn't do very well</p>
-            <button id="btn_restart" class="">restart game</button>
+            <button id="btn_restart" class="">r̸e̴s̷͉͖͌̈̊͐t̷̼̺̗̑̒ḁ̶̮̘͒͊͘r̵̢̘͓͑̀͌͌̀̇͝͝ẗ̴̡͙̝̙̜͔̟͔́̎͋̈́͌̏̈́ ̸̢̢̱̘̟̤͖̦̓̐̑̐͂̈́̕g̴̨̭͉̜͂ȧ̷̜̽̏̕m̶̗̊e̶̼͑</button>
         </div>
         <div id="level_complete" class="hidden">
-            <p>u did good</p>
-            <button id="btn_go_to_start" class="">go to start game</button>
+            <p>u did good - enjoy the music</p>
+            <button id="btn_go_to_start" class="">r̸e̴s̷͉͖͌̈̊͐t̷̼̺̗̑̒ḁ̶̮̘͒͊͘r̵̢̘͓͑̀͌͌̀̇͝͝ẗ̴̡͙̝̙̜͔̟͔́̎͋̈́͌̏̈́ ̸̢̢̱̘̟̤͖̦̓̐̑̐͂̈́̕g̴̨̭͉̜͂ȧ̷̜̽̏̕m̶̗̊e̶̼͑</button>
         </div>
 
     </div>
@@ -123,6 +126,14 @@
     <audio id="hit4_audio" src="audio/hit4_audio.mp3"></audio>
     <audio id="life1_audio" src="audio/life1_audio.mp3"></audio>
     <audio id="life2_audio" src="audio/life2_audio.mp3"></audio>
+    <audio id="bad1_audio" src="audio/bad1_audio.mp3" loop></audio>
+    <audio id="bad2_audio" src="audio/bad2_audio.mp3" loop></audio>
+    <audio id="bad3_audio" src="audio/bad3_audio.mp3" loop></audio>
+    <audio id="bad4_audio" src="audio/bad4_audio.mp3" loop></audio>
+    <audio id="bad1_audio_hit" src="audio/bad1_audio_hit.mp3"></audio>
+    <audio id="bad2_audio_hit" src="audio/bad2_audio_hit.mp3"></audio>
+    <audio id="bad3_audio_hit" src="audio/bad3_audio_hit.mp3"></audio>
+    <audio id="bad4_audio_hit" src="audio/bad4_audio_hit.mp3"></audio>
 
     <script src="script.js"></script>    
 </body>

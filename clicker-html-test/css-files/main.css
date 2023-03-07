@@ -38,6 +38,16 @@
     width: 100%;
 }
 
+#main_char_gif {
+    width: 250%;
+    position: absolute;
+    top: -25vw;
+    left: -65%;
+    filter: blur(1.7px) drop-shadow(0.75em 0.75em 0.75rem rgb(251, 227, 245));
+    opacity: 0.4;
+
+}
+
 /* animations */
 
 .pulse{
@@ -58,5 +68,43 @@
 
     100% {
         scale: 99%;
+    }
+}
+
+.fade_in_out{
+    animation-name: fade_in_out;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade_in_out {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.rotate360 {
+    animation-name: rotate360;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
